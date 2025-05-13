@@ -1,0 +1,524 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: rgb(9, 24, 41);
+  background: url('../img/flight.webp') no-repeat center center/cover;
+  backdrop-filter: blur(4px);
+  line-height: 1.6;
+  
+}
+
+/* Header */
+.Header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    color: aliceblue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 80px;
+    margin-right: 40px;
+    margin-top: 42px;
+    
+}
+.travel-buddies {
+    font-family:"Abril Fatface-Regular";
+    font-weight: 480;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    bottom: 200px;
+      color: #ffffff; /* or any color you prefer */
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+.top-destinations {
+    margin-left: 160px;
+    font-style: "Frank Ruhl Libre-Regular";
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    color: #ffffff; /* or any color you prefer */
+    text-decoration: none;
+    cursor: pointer;
+}
+.top-destinations:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+.top-deals {
+    font-style: "Frank Ruhl Libre-Regular";
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    color: #ffffff; /* or any color you prefer */
+    text-decoration: none;
+    cursor: pointer;
+}
+.top-deals:hover {
+   color: #ffffff;
+   transform: scale(1.1);
+}
+.reviews {
+    font-style: "Frank Ruhl Libre-Regular";
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    color: #ffffff; /* or any color you prefer */
+    text-decoration: none;
+    cursor: pointer;
+}
+.reviews:hover {
+   color: #ffffff;
+   transform: scale(1.1);
+}
+
+.about-us {
+    font-style: "Frank Ruhl Libre-Regular";
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    color: #ffffff; /* or any color you prefer */
+    text-decoration: none;
+    cursor: pointer;
+}
+.about-us:hover {
+   color: #ffffff;
+   transform: scale(1.1);
+    cursor: pointer;
+}
+
+.user {
+    font-style: "Frank Ruhl Libre-Regular";
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-right: 100px;
+}
+.user:hover {
+   color: #ffffff;
+   transform: scale(1.1);
+}
+
+.user-link {
+    color: #ffffff; /* or any color you prefer */
+    text-decoration: none;
+    cursor: pointer;
+}
+.line {
+    margin-top: -15px;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 1px 0 0 0;
+    width: 1200px;
+    height: 2px;
+    position: absolute;
+    left: 4px;
+    right: 9px;
+    top: 60px;
+    transform: rotate(0.086deg) scale(1, 1);
+  }
+  
+
+/* ====== CENTERED CONTAINER FOR FLIGHTS AREA ====== */
+main h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 8rem;
+}
+
+.flight-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+ 
+}
+
+/* ====== FILTERS (Dropdowns) ====== */
+.search-section {
+    padding: 2rem;
+    color: white;
+}
+
+.search-filters {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    min-width: 250px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #0A141D;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Dropdown Animation Styles */
+.filter-group select {
+    transition: all 0.3s ease;
+    transform-origin: top center;
+}
+
+.filter-group select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.5);
+    transform: scale(1.02);
+}
+
+/* Animate the dropdown options */
+.filter-group select option {
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter-group select option:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Fade-in animation for dropdown */
+@keyframes ripple {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.filter-group {
+    animation: ripple 0.5s ease-out;
+}
+
+/* Hover effect for filter labels */
+.filter-group label {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.filter-group:hover label {
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+
+/* ====== CATEGORIES ====== */
+.categories {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #071b2d;
+  }
+
+.categories span {
+ 
+  display: inline-block;
+  font-weight: bold;
+  color: #fffdfd;
+  margin: auto 50px;
+  
+}
+
+.sub {
+  font-weight: bold;
+  display: inline-block;
+  margin-top: rem;
+  margin-bottom: 2rem;
+  color: rgb(255, 255, 255);
+  font-size: 1.8rem;
+ 
+}
+
+/* ====== FLIGHT CARD ====== */
+.airline-tabs {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .airline-tabs button {
+    background-color: transparent ;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .airline-tabs button:hover {
+    background-color: #111F2C;
+    color: #fff;
+  }
+
+  .airline-section {
+    display: none;
+  }
+
+  .airline-section:first-child {
+    display: block;
+  } 
+.flight-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px ;
+  gap: 20px;
+}
+
+.flight-card {
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+  padding: 15px 20px;
+  width: 95%;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: auto;
+  
+}
+
+.route {
+  font-weight: bold;
+}
+
+.price {
+  margin-left: auto;
+  font-weight: normal;
+  margin-right: 200px;
+}
+
+.flight-card button {
+  background-color: #051c33;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.flight-card button:hover {
+  background-color: #21496e;
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+/* ====== FOOTER STYLES (UNCHANGED) ====== */
+.footer {
+  background-color: #071b2d;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.footer-left .logo {
+  width: 270px;
+  margin-bottom: 5px;
+}
+
+.footer-left {
+  text-align: center;
+}
+
+.footer-left .tagline {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.footer-left .subtext {
+  display: block;
+}
+
+.footer-middle {
+  flex: 1;
+  max-width: 250px;
+  margin-top: 40px;
+}
+
+.footer-middle h3 {
+  margin-bottom: 10px;
+  font-size: 27px;
+}
+
+.footer-middle form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-middle input {
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #111F2C;
+  border: 1px solid white;
+}
+
+.footer-message {
+  flex: 1;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 105px;
+}
+
+.footer-message textarea {
+  color: white;
+  height: 80px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid white;
+  background-color: #111F2C;
+  resize: none;
+}
+
+.footer-message button {
+  margin-top: 5px;
+  align-self: center;
+  padding: 8px 15px;
+  background: #0e4c8c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-message button:hover {
+  background-color: #44586b;
+  transform: translateY(-3px);
+}
+
+.footer-right {
+  flex: 1;
+  max-width: 250px;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.5rem;
+}
+
+.footer-right h3 {
+  margin-bottom: 5px;
+}
+
+.footer-right p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 2.5rem;
+}
+
+.social-icons a {
+  color: #6087af;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.social-icons a:hover {
+  color: #f39c12;
+  transform: translateY(-3px);
+}
+
+.social-icons a:nth-child(1):hover { color: #3b5998; }
+.social-icons a:nth-child(2):hover { color: #1da1f2; }
+.social-icons a:nth-child(3):hover { color: #e1306c; }
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  color: #ffffff;
+  font-size: 14px;
+  background-color: #0A141D;
+}
+
+.contact-form-row {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+  flex-wrap: wrap; /* for responsiveness */
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-width: 250px;
+}
+
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1;
+  min-width: 250px;
+}
+
+.contact-left input,
+.contact-right textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: #111F2C;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.contact-right textarea {
+  height: 90px;
+  resize: none;
+}
+
+.contact-right button {
+  background-color: #0e4c8c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-right button:hover {
+  background-color: #44586b;
+  transform: translateY(-3px);
+}

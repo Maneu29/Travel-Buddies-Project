@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Buddies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="signupstyle.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="logo">
+    <img src="img/logo.png" alt="logo">
+         </div>
+    <div class="signup-container">
+        <h1>Sign up</h1>
+        <form id="signupForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group password-container">
+            <label for="password">Create Password</label>
+            <div class="password-input-wrapper">
+            <input type="password" id="password" name="password" required>
+            <i class="fas fa-eye-slash toggle-password" data-target="password"></i>
+            </div>
+            </div>
+            <div class="form-group password-container">
+                <label for="confirmPassword">Confirm Password</label>
+                <div class="password-input-wrapper">
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <i class="fas fa-eye-slash toggle-password" data-target="confirmPassword"></i>
+                </div>
+            </div>
+            <div class="form-group remember-me">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember me?</label>
+            </div>
+            <button type="submit" class="signup-btn">Sign up</button>
+        </form>
+        <div class="login-link">
+            Already have an account? <a href="login.html">Login</a>
+        </div>
+    </div>
+    <script src="signupscript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

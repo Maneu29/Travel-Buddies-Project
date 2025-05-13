@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Buddies - Flights</title>
+  <link rel="stylesheet" href="flightstyles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+      <header>
+          <!-- Header -->
+        <div class="Header">
+            <a href="../landingpage.html#travel-buddies" class="travel-buddies">Travel Buddies</a>
+            <a href="../landingpage.html#top-destinations"class="top-destinations">Top Destinations</a>
+            <a href="../landingpage.html#top-deals"class="top-deals">Top Deals</a>
+            <a href="../landingpage.html#reviews"class="reviews">Reviews</a>
+            <a href="../landingpage.html#about-us" class="about-us">About Us</a>
+            <a href="../landingpage.html" class="user-link" id="logout-link">Logout</a>
+            <div class="line"></div>
+        </div>
+    </header>
+
+  <main>
+  <div class="flight-section">
+    <h1>FLIGHTS</h1>
+
+    <section class="search-section">
+            <div class="search-filters">
+                <div class="filter-group">
+                    <label for="from">From</label>
+                    <select id="from">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="bacolod">Bacolod (BCD)</option>
+                        <option value="bohol">Bohol (TAG)</option>
+                        <option value="cagayan de oro">Cagayan De Oro (CDO)</option>
+                        <option value="cebu">Cebu (CEB)</option>
+                        <option value="clark">Clark (CRK)</option>
+                        <option value="davao">Davao (DVO)</option>
+                        <option value="general santos">General Santos (GES)</option>
+                        <option value="iloilo">Iloilo (ILO)</option>
+                        <option value="kalibo">Kalibo (KLO)</option>
+                        <option value="laoag">Laoag (LAO)</option>
+                        <option value="legazpi">Legazpi (LGP)</option>
+                        <option value="manila">Manila (MNL)</option>
+                        <option value="puerto princesa">Puerto Princesa (PPS)</option>
+                        <option value="tacloban">Tacloban (TAC)</option>
+                        <option value="tuguegarao">Tuguegarao (TUG)</option>
+                        <option value="zamboanga">Zamboanga (ZAM)</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="to">To</label>
+                    <select id="to">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="bacolod">Bacolod (BCD)</option>
+                        <option value="bohol">Bohol (TAG)</option>
+                        <option value="cagayan de oro">Cagayan De Oro (CDO)</option>
+                        <option value="cebu">Cebu (CEB)</option>
+                        <option value="clark">Clark (CRK)</option>
+                        <option value="davao">Davao (DVO)</option>
+                        <option value="general santos">General Santos (GES)</option>
+                        <option value="iloilo">Iloilo (ILO)</option>
+                        <option value="kalibo">Kalibo (KLO)</option>
+                        <option value="laoag">Laoag (LAO)</option>
+                        <option value="legazpi">Legazpi (LGP)</option>
+                        <option value="manila">Manila (MNL)</option>
+                        <option value="puerto princesa">Puerto Princesa (PPS)</option>
+                        <option value="tacloban">Tacloban (TAC)</option>
+                        <option value="tuguegarao">Tuguegarao (TUG)</option>
+                        <option value="zamboanga">Zamboanga (ZAM)</option>
+                        <option value="amsterdam">Amsterdam (AMS)</option>
+                        <option value="bangkok">Bangkok (BKK)</option>
+                        <option value="cagayan de oro">Beijing (PEK)</option>
+                        <option value="dubai">Dubai (DXB)</option>
+                        <option value="hong kong">Hong Kong (HKG)</option>
+                        <option value="kuala lumpur">Kuala Lumpur (KUL)</option>
+                        <option value="london">London (LHR)</option>
+                        <option value="los angeles">Los Angeles (LAX)</option>
+                        <option value="new york">New York (JFK)</option>
+                        <option value="paris">Paris (CDG)</option>
+                        <option value="san francisco">San Francisco (SFO)</option>
+                        <option value="seoul">Seoul (ICN)</option>
+                        <option value="singapore">Singapore (SIN)</option>
+                        <option value="sydney">Sydney (SYD)</option>
+                        <option value="tokyo">Tokyo (NRT)</option>
+                        <option value="toronto">Toronto (YYZ)</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="cabin">Cabin Class</label>
+                    <select id="cabin">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="low">Economy</option>
+                        <option value="medium">Business</option>
+                        <option value="high">Class</option>                     
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="budget">Budget</label>
+                    <select id="budget">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="low">₱0 - ₱5,000</option>
+                        <option value="medium">₱5,000 - ₱10,000</option>
+                        <option value="high">₱10,000 - ₱20,000</option>
+                        <option value="high">₱20,000 - ₱50,000</option>
+                        <option value="high">₱50,000+</option>
+                    </select>
+                </div>
+            </div>                            
+        </section>
+
+    <!-- Navigation Tabs -->
+<div class="airline-tabs">
+  <button onclick="showAirline('pal')">Philippine Airlines</button>
+  <button onclick="showAirline('airasia')">AirAsia</button> 
+  <button onclick="showAirline('cebupacific')">Cebu Pacific</button>
+</div>
+
+<!-- PAL Flights -->
+<div id="pal" class="airline-section">
+  <!-- Add Philippine Airlines flights here -->
+
+   <section class="flight-cards">
+    <span class="sub">Philippine Airlines Domestic</span>
+    <div class="flight-card"
+      data-from="bacolod"
+      data-to="manila"
+      data-cabin="low"
+      data-price="1999">
+      
+      <strong class="route">BACOLOD (BCD) - MANILA (MNL)</strong>
+      <span class="price">₱1,999</span>
+      <a href="../booking/bookingpage_flights_domestic1/bookingpage_flights_domestic1.html"><button>BOOK NOW</button></a>
+    </div>
+    <div class="flight-card"
+      data-from="davao"
+      data-to="manila"
+      data-cabin="medium"
+      data-price="3880">
+      
+      <strong class="route">DAVAO (DVO) - MANILA (MNL)</strong>
+      <span class="price">₱3,880</span>
+      <a href="../booking/bookingpage_flights_domestic2/bookingpage_flights_domestic2.html"><button>BOOK NOW</button></a>
+
+      
+    </div>
+    <div class="flight-card"
+      data-from="manila"
+      data-to="kalibo"
+      data-cabin="medium"
+      data-price="2499">
+      <strong class="route">MANILA (MNL) - KALIBO (KLO)</strong>
+      <span class="price">₱2,499</span>
+      <a href="../booking/bookingpage_flights_domestic3/bookingpage_flights_domestic3.html"><button>BOOK NOW</button></a>
+
+    </div>
+    <div class="flight-card"
+      data-from="davao"
+      data-to="siargao"
+      data-cabin="low"
+      data-price="2200">
+      <strong class="route">DAVAO (DVO) - SIARGAO (IAO)</strong>
+      <span class="price">₱2,200</span>
+      <a href="../booking/bookingpage_flights_domestic4/bookingpage_flights_domestic4.html"><button>BOOK NOW</button></a>
+    </div>
+    <div class="flight-card"
+      data-from="bohol"
+      data-to="manila"
+      data-cabin="low"
+      data-price="1500">
+      <strong class="route">CEBU (CEB) - BOHOL (BOH)</strong>
+      <span class="price">₱1,500</span>
+      <a href="../booking/bookingpage_flights_domestic5/bookingpage_flights_domestic5.html"><button>BOOK NOW</button></a>
+    </div>
+    <div class="flight-card"
+      data-from="iloilo"
+      data-to="manila"
+      data-cabin="medium"
+      data-price="3880">
+      <strong class="route">ILOILO (ILO) - CAGAYAN DE ORO (CDO)</strong>
+      <span class="price">₱2,100</span>
+      <a href="../booking/bookingpage_flights_domestic6/bookingpage_flights_domestic6.html"><button>BOOK NOW</button></a>
+    </div>
+    <div class="flight-card"
+      data-from="laoag"
+      data-to="puerto princesa"
+      data-cabin="medium"
+      data-price="3400">
+      <strong class="route">LAOAG (LAO) - PUERTO PRINCESA (PPS)</strong>
+      <span class="price">₱3,400</span>
+      <a href="../booking/bookingpage_flights_domestic7/bookingpage_flights_domestic7.html"><button>BOOK NOW</button></a>
+    </div>
+
+    <span class="sub">Philippine Airlines International</span>
+
+    <div class="flight-card"
+      data-from="tokyo"
+      data-to="dubai"
+      data-cabin="high"
+      data-price="43945">
+      <strong class="route">TOKYO (NRT) - DUBAI (DXB) </strong>
+      <span class="price">₱43,945</span>
+      <a href="../booking/bookingpage_flights_international1/bookingpage_flights_international1.html"><button>BOOK NOW</button></a>
+    </div>
+    <div class="flight-card"
+      data-from="los angeles"
+      data-to="manila"
+      data-cabin="high"
+      data-price="50790">>>
+      <strong class="route">LOS ANGELES (LA) - MANILA (MNL)</strong>
+      <span class="price">₱50,790</span>
+      <a href="../booking/bookingpage_flights_international2/bookingpage_flights_international2.html"><button>BOOK NOW</button></a>
+    </div>
+    <div class="flight-card"
+      data-from="paris"
+      data-to="bangkok"
+      data-cabin="medium"
+      data-price="41959">>>
+      <strong class="route">PARIS (CDG) - BANGKOK (BKK)</strong>
+      <span class="price">₱41,959</span>
+      <a href="../booking/bookingpage_flights_international3/bookingpage_flights_international3.html"><button>BOOK NOW</button></a>
+    </div>
+    <div class="flight-card"
+    data-from="kuala lumpur"
+      data-to="seoul"
+      data-cabin="high"
+      data-price="36659">
+      <strong class="route">KUALA LUMPUR (KUL) - SEOUL (ICN)</strong>
+      <span class="price">₱36,659</span>
+      <a href="../booking/bookingpage_flights_international4/bookingpage_flights_international4.html"><button>BOOK NOW</button></a>
+    </div>
+    <div class="flight-card"
+       data-from="manila"
+      data-to="london"
+      data-cabin="high"
+      data-price="63499">>>
+      <strong class="route">MANILA (MNL) - LONDON (LHR)</strong>
+      <span class="price">₱63,499</span>
+      <a href="../booking/bookingpage_flights_international5/bookingpage_flights_international5.html"><button>BOOK NOW</button></a>
+    </div>
+    <div class="flight-card"
+      data-from="toronto"
+      data-to="dubai"
+      data-cabin="high"
+      data-price="39579">
+      <strong class="route">TORONTO (YYZ) - DUBAI (DXB)</strong>
+      <span class="price">₱39,579</span>
+      <a href="../booking/bookingpage_flights_international6/bookingpage_flights_international6.html"><button>BOOK NOW</button></a>
+    </div>
+    <div class="flight-card"
+      data-from="singapore"
+      data-to="sydney"
+      data-cabin="high"
+      data-price="31999">
+      <strong class="route">SINGAPORE (SIN) -  SYDNEY (SYD)</strong>
+      <span class="price">₱31,999</span>
+      <a href="../booking/bookingpage_flights_international7/bookingpage_flights_international7.html"><button>BOOK NOW</button></a>
+    </div>
+  </section>
+
+</div>
+
+<!-- AirAsia Flights -->
+<div id="airasia" class="airline-section" style="display:none;">
+  <!-- Add AirAsia flights here -->
+ <section class="flight-cards">
+    <span class="sub">AirAsia - Domestic</span>
+<div class="flight-card"
+      data-from="manila"
+      data-to="cebu"
+      data-cabin="low"
+      data-price="1800">
+  <strong class="route">MANILA (MNL) - CEBU (CEB)</strong>
+  <span class="price">₱1,800</span>
+  <button>BOOK NOW</button>
+</div>
+<div class="flight-card"
+      data-from="clark"
+      data-to="sydney"
+      data-cabin="medium"
+      data-price="2100">
+  <strong class="route">CLARK (CRK) - ILOILO (ILO)</strong>
+  <span class="price">₱2,100</span>
+  <button>BOOK NOW</button>
+</div>
+<div class="flight-card"
+    data-from="davao"
+      data-to="bacolod"
+      data-cabin="medium"
+      data-price="3000">
+  <strong class="route">DAVAO (DVO) - BACOLOD (BCD)</strong>
+  <span class="price">₱3,000</span>
+  <button>BOOK NOW</button>
+</div>
+
+<span class="sub">AirAsia - International</span>
+<div class="flight-card"
+      data-from="manila"
+      data-to="kuala lumpur"
+      data-cabin="high"
+      data-price="39999">
+  <strong class="route">MANILA (MNL) - KUALA LUMPUR (KUL)</strong>
+  <span class="price">₱39,999</span>
+  <button>BOOK NOW</button>
+</div>
+<div class="flight-card"
+      data-from="cebu"
+      data-to="seoul"
+      data-cabin="high"
+      data-price="37,450">
+  <strong class="route">CEBU (CEB) - SEOUL (ICN)</strong>
+  <span class="price">₱37,450</span>
+  <button>BOOK NOW</button>
+</div>
+
+</div>
+ </section>
+  
+
+<!-- Cebu Pacific Flights -->
+<div id="cebupacific" class="airline-section" style="display:none;">
+  <!-- Add Cebu Pacific flights here -->
+   <section class="flight-cards">
+      <span class="sub">Cebu Pacific - Domestic</span>
+<div class="flight-card"
+    data-from="manila"
+      data-to="davao"
+      data-cabin="medium"
+      data-price="2300">
+  <strong class="route">MANILA (MNL) - DAVAO (DVO)</strong>
+  <span class="price">₱2,300</span>
+  <button>BOOK NOW</button>
+</div>
+<div class="flight-card"
+      data-from="cebu"
+      data-to="cagayan de oro"
+      data-cabin="low"
+      data-price="2600">
+  <strong class="route">CEBU (CEB) - CAGAYAN DE ORO (CDO)</strong>
+  <span class="price">₱2,600</span>
+  <button>BOOK NOW</button>
+</div>
+<div class="flight-card"
+      data-from="iloilo"
+      data-to="zamboanga"
+      data-cabin="high"
+      data-price="3100">
+  <strong class="route">ILOILO (ILO) - ZAMBOANGA (ZAM)</strong>
+  <span class="price">₱3,100</span>
+  <button>BOOK NOW</button>
+</div>
+
+<span class="sub">Cebu Pacific - International</span>
+<div class="flight-card"
+    data-from="manila"
+      data-to="singapore"
+      data-cabin="high"
+      data-price="34200">
+  <strong class="route">MANILA (MNL) - SINGAPORE (SIN)</strong>
+  <span class="price">₱34,200</span>
+  <button>BOOK NOW</button>
+</div>
+<div class="flight-card"
+    data-from="clark"
+      data-to="bangkok"
+      data-cabin="high"
+      data-price="35850">
+  <strong class="route">CLARK (CRK) - BANGKOK (BKK)</strong>
+  <span class="price">₱35,850</span>
+  <button>BOOK NOW</button>
+</div>
+
+</div>
+
+   </section>
+  
+
+
+  </div>
+
+ 
+</main>
+
+
+          <section class="footer">
+  <div class="footer-content">
+    <!-- Left Section: Logo + Tagline -->
+    <div class="footer-left">
+      <img src="../img/logo.png" alt="Travel Buddies Logo" class="logo" />
+      <p class="tagline">
+    Travel smarter, travel together<br />
+    <span class="subtext">with Travel Buddies.</span>
+    </div>
+
+        <!-- Middle Section: Contact Form -->
+<div class="footer-middle">
+  <h3>Contact Us</h3>
+  <form id="contactForm" class="contact-form-row">
+  <div class="contact-left">
+    <input type="text" id="name" placeholder="Full Name" />
+    <input type="email" id="email" placeholder="Email" />
+    <input type="tel" id="phone" placeholder="Phone Number" />
+  </div>
+  <div class="contact-right">
+    <textarea id="message" placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </div>
+</form>
+</div>
+
+    <!-- Right Section: Socials -->
+    <div class="footer-right">
+      <h3>Follow us on our <br />Socials!</h3>
+      <p>Interact with fellow Travelers</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+  <footer class="footer-bottom">
+    <p>© 2025 Travel Buddies. All Rights Reserved</p>
+  </footer>
+
+      
+
+    </main>
+
+  <script src="flightscript.js"></script>
+</body>
+</html>

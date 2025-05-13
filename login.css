@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    width: 100%;
+    font-family: "Arial", sans-serif;
+    overflow-x: hidden;
+  }
+  
+  .background {
+    background: url('img/tv-login.png') no-repeat center center;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    filter: blur(4px);
+    z-index: -1;
+  }
+
+  .logo {
+    position: fixed; 
+    bottom: 5px;
+    left: 5px;
+    z-index: 100;
+  }
+
+  .logo img {
+    width: 200px;
+    height: auto;
+  }
+
+  .container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px 40px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .password-wrapper {
+    position: relative;
+  }
+  
+  .password-wrapper input {
+    padding-right: 40px;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #444;
+    font-size: 1.1em;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+  }
+  
+  button[type="submit"] {
+    background: #0e2a47;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+
+
+  button[type="submit"] {
+    transition: all 0.3s ease; 
+    position: relative; 
+    overflow: hidden; 
+  }
+  
+  button[type="submit"]:hover {
+    background: #1a3a5a; 
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  button[type="submit"]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+  
+  button[type="submit"]:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  button[type="submit"]:hover .spinner {
+    border-top-color: white;
+  }
+  
+  .divider {
+    text-align: center;
+    margin: 15px 0;
+    position: relative;
+  }
+  
+  .divider span {
+    background: #fff;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #aaa;
+    z-index: 0;
+  }
+  
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .social-buttons button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  .facebook { background: #3b5998; color: white; }
+  .google { background: #db4437; color: white; }
+  .apple { background: #000; color: white; }
+  
+  .signup {
+    text-align: center;
+    font-size: 0.9em;
+  }
+
+  .error-message {
+    color: #d32f2f;
+    background-color: #fde8e8;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border-left: 4px solid #d32f2f;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .error-message::before {
+    content: "!";
+    font-weight: bold;
+  }
+
+  .password-strength {
+    margin: 5px 0 15px;
+    width: 100%;
+  }
+  
+  .strength-bar {
+    height: 5px;
+    background: #eee;
+    border-radius: 3px;
+    margin-bottom: 3px;
+    transition: all 0.3s ease;
+  }
+  
+  .strength-text {
+    font-size: 0.8em;
+    color: #666;
+  }
+
+  .spinner {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 2px solid white;
+    width: 16px;
+    height: 16px;
+    animation: spin 1s linear infinite;
+    display: none;
+    position: absolute;
+    right: 20px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  button[type="submit"] {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  input, button {
+    transition: all 0.3s ease;
+  }
+  
+  .weak {
+    background: #ff5252;
+    width: 33%;
+  }
+  
+  .medium {
+    background: #ffb74d;
+    width: 66%;
+  }
+  
+  .strong {
+    background: #4caf50;
+    width: 100%;
+  }

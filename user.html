@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link  rel="stylesheet" href="userstyle.css"> 
+    
+    <title>Travel Buddies</title>
+
+</head>
+<body>
+    <div class="landing-page">
+        <!-- Header -->
+        <div class="Header">
+            <a href="landingpage.html#travel-buddies" class="travel-buddies">Travel Buddies</a>
+            <a href="landingpage.html#top-destinations"class="top-destinations">Top Destinations</a>
+            <a href="landingpage.html#top-deals"class="top-deals">Top Deals</a>
+            <a href="landingpage.html#reviews"class="reviews">Reviews</a>
+            <a href="landingpage.html#about-us" class="about-us">About Us</a>
+            <a href="landingpage.html" class="user-link" id="logout-link">Logout</a>
+            <div class="line"></div>
+        </div>
+    <!-- Profile -->
+    <div class="profile-header">
+    <div class="banner">
+      <img src="img/headerpic.jpg" alt="Banner Image" />
+    </div>
+    <div class="profile-info">
+      <img class="profile-pic" src="img/profilepic.jpg" alt="Profile Picture" />
+      <h2 class="username">TomTheExplorer</h2>
+      <button id="edit-btn">Edit Profile</button>
+    </div>
+    </div>
+
+    <div id="edit-modal" class="modal">
+    <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Edit Profile</h2>
+    <form id="edit-profile-form">
+      <label for="username">Username:</label>
+      <input type="text" id="username-input" value="TomTheExplorer" required />
+      <br /><br />
+      <label for="profile-pic">Profile Picture:</label>
+      <input type="file" id="profile-pic-input" accept="image/*" />
+      <br /><br />
+      <button type="submit">Save Changes</button>
+    </form>
+    </div>
+    </div>
+
+  <!-- Dashboard + Calendar Flex Container -->
+<div class="dashboard-calendar-wrapper">
+  <!-- Calendar Section -->
+  <div class="calendar-wrapper">
+    <h2>MARK YOUR TRAVEL PLANS</h2>
+    <div class="calendar">
+      <div class="calendar-header">
+        <button id="prev">&#8592;</button>
+        <span id="monthYear">January 2025</span>
+        <button id="next">&#8594;</button>          
+      </div>
+      <div class="day-names">
+        <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+      </div>
+      <div class="days" id="calendarDays"></div>
+    </div>
+    <div id="selectedRange" style="color: white; text-align: center; margin-top: 15px; font-size: 1.1em;"></div>
+  </div>
+
+  <!-- Dashboard Section -->
+  <div class="dashboard">
+    <h2>DASHBOARD</h2>
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="booked">Booked</button>
+      <button class="tab-btn" data-tab="canceled">Canceled</button>
+      <button class="tab-btn" data-tab="done">Done</button>
+    </div>
+
+    <div class="tab-content active" id="booked">
+      <div class="card">
+        <div class="card-header">Type: Flight</div>
+        <div class="card-body">
+          <div>Origin-Destination: Davao-Manila</div>
+          <div>Departure: April 29, 2025</div>
+          <div>Return: May 7, 2025</div>
+          <button class="cancel-btn">Cancel</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Type: Hotel</div>
+        <div class="card-body">
+          <div>Hotel Name: <strong>The Peninsula Manila</strong></div>
+          <div>Check-in: April 29, 2025</div>
+          <div>Check-out: May 7, 2025</div>
+          <button class="cancel-btn">Cancel</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Type: Activities</div>
+        <div class="card-body">
+          <div>Name of Activity: Art In Island Ticket in Manila</div>
+          <div>Date: May 4, 2025</div>
+          <button class="cancel-btn">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="canceled">
+      <div class="card">
+        <div class="card-header">Type: Flight</div>
+        <div class="card-body">
+          <div>Origin-Destination: Cebu-Manila</div>
+          <div>Departure: March 5, 2025</div>
+          <div>Return: March 10, 2025</div>
+          <button class="cancel-btn">Cancelled</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="done">
+      <div class="card">
+        <div class="card-header">Type: Activity</div>
+        <div class="card-body">
+          <div>Name: Taal Volcano Trek</div>
+          <div>Date: February 10, 2025</div>
+          <button class="cancel-btn">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button id="scrollToTopBtn" title="Go to top">↑</button>
+
+
+    <!-- Footer -->
+      <footer>
+    <p>© 2023 Travel Buddies. All Rights Reserved</p>
+    </footer>
+
+    
+       
+       
+       
+          
+        
+    </div>
+   
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="userscript.js"></script>
+</body>
+</html>

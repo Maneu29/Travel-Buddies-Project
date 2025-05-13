@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link  rel="stylesheet" href="landingstyle.css"> 
+    
+    <title>Travel Buddies</title>
+
+</head>
+<body>
+    <div class="landing-page">
+        <!-- Header -->
+        <div class="Header">
+            <div class="travel-buddies">Travel Buddies</div>
+            <a href="#top-destinations"class="top-destinations">Top Destinations</a>
+            <a href="#top-deals"class="top-deals">Top Deals</a>
+            <a href="#reviews" class="reviews">Reviews</a>
+            <a href="#about-us" class="about-us">About Us</a>
+            <a href="login.html" class="user-link">User</a>
+            <div class="line"></div>
+        </div>
+
+        <!-- Tagline -->
+        <div class="hero-section">
+            <h1 class="tagline">Wander Together,<br>Explore Forever.</h1>
+        </div>
+
+        <!-- Endless Pictures -->
+        <div class="endless-pictures">
+        <div class="track">
+            <img src="img/paris.jpg" alt="Paris">
+            <img src="img/taj-mahal.jpg" alt="Taj Mahal">
+            <img src="img/great-wall-of-china.jpg" alt="Great Wall">
+            <img src="img/pyramid.jpg" alt="Pyramid">
+            <img src="img/grand-mosque.jpg" alt="Mosque">
+            <img src="img/mt-fuji.jpg" alt="Mount Fuji">
+  
+            <!-- Duplicate set for seamless loop -->
+            <img src="img/paris.jpg" alt="Paris">
+            <img src="img/taj-mahal.jpg" alt="Taj Mahal">
+            <img src="img/great-wall-of-china.jpg" alt="Great Wall">
+            <img src="img/pyramid.jpg" alt="Pyramid">
+            <img src="img/grand-mosque.jpg" alt="Mosque">
+            <img src="img/mt-fuji.jpg" alt="Mount Fuji">
+
+            <!-- Duplicate set for seamless loop -->
+            <img src="img/paris.jpg" alt="Paris">
+            <img src="img/taj-mahal.jpg" alt="Taj Mahal">
+            <img src="img/great-wall-of-china.jpg" alt="Great Wall">
+            <img src="img/pyramid.jpg" alt="Pyramid">
+            <img src="img/grand-mosque.jpg" alt="Mosque">
+            <img src="img/mt-fuji.jpg" alt="Mount Fuji">
+        </div>
+        </div>
+
+        <!-- Services Navigation Section -->
+         
+        <section id="services">
+            <div class="navigation">
+        <ul>
+        <li class="list active">
+            <a href="hotelpage/hotels.html">
+                <span class="icon"><ion-icon name="bed-outline"></ion-icon></span>
+                <span class="text">Hotels</span>
+                <span class="circle"></span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="flightspage/flights.html">
+                <span class="icon"><ion-icon name="airplane-outline"></ion-icon></span>
+                <span class="text">Flights</span>
+                <span class="circle"></span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="apartmentpage/apartments.html">
+                <span class="icon"><ion-icon name="business-outline"></ion-icon></span>
+                <span class="text">Apartments</span>
+                <span class="circle"></span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="activitiespage/activities.html">
+                <span class="icon"><ion-icon name="business-outline"></ion-icon></span>
+                <span class="text">Activities</span>
+                <span class="circle"></span>
+            </a>
+        </li>
+        <div class="indicator"></div>
+        </ul>
+        </div>
+        <div class="services">SERVICES</div>
+
+
+        </section>
+        
+
+       <!-- Top Destinations -->
+       <div id="contentContainer" style="overflow-y: auto; height: 100vh;">
+          <section id="top-destinations">
+        
+       <div class="container">
+
+        <div class="slide">
+
+            <div class="item"
+                style="background-image: url(img/fuji.jpg);">
+                <div class="content">
+                    <div class="name">Mt. Fuji</div>
+                    <div class="des">Mount Fuji is Japan's tallest mountain, standing at 3,776 meters (12,389 feet). It is an iconic, snow-capped volcano known for its symmetrical cone shape and cultural significance. Located on Honshu Island near Tokyo, Mount Fuji is a popular destination for climbers, photographers, and spiritual seekers. It is also a UNESCO World Heritage Site.</div>
+                    <a href="#services" onclick="glowTarget(event)">
+                     <button>Book Your Travel</button>
+                    </a>
+                </div>
+            </div>
+            <div class="item"
+                style="background-image: url(img/thai1.jpg);">
+                <div class="content">
+                    <div class="name">Wat Phra That Doi Suthep</div>
+                    <div class="des">Wat Phra That Doi Suthep is a sacred Buddhist temple located on Doi Suthep mountain, about 15 kilometers from Chiang Mai, Thailand. It was built in the 14th century and is one of the most important and respected temples in northern Thailand. The temple is famous for its beautiful golden stupa (also called a chedi), which is believed to hold a relic of the Buddha.</div>
+                    <a href="#services" onclick="glowTarget(event)">
+                     <button>Book Your Travel</button>
+                    </a>
+                </div>
+            </div>
+            <div class="item"
+                style="background-image: url(img/gold.jpg);">
+                <div class="content">
+                    <div class="name">Golden Gate Bridge</div>
+                    <div class="des">Golden Gate Bridge is a famous suspension bridge in San Francisco, California, that connects the city to Marin County. It was completed in 1937 and is known for its tall towers, long span, and iconic orange-red color. The bridge crosses the Golden Gate Strait, the entrance to San Francisco Bay from the Pacific Ocean, and is considered one of the most beautiful and photographed bridges in the world.</div>
+                    <a href="#services" onclick="glowTarget(event)">
+                     <button>Book Your Travel</button>
+                    </a>
+                </div>
+            </div>
+            <div class="item"
+                style="background-image: url(img/sydn.jpg);">
+                <div class="content">
+                    <div class="name">Sydney Opera House</div>
+                    <div class="des">Sydney Opera House is a world-famous performing arts center located in Sydney, Australia. It was opened in 1973 and is known for its unique sail-like design. The Opera House hosts concerts, theater, opera, and other events, and is one of the most iconic landmarks in Australia.</div>
+                    <a href="#services" onclick="glowTarget(event)">
+                     <button>Book Your Travel</button>
+                    </a>
+                </div>
+            </div>
+            <div class="item"
+                style="background-image: url(img/bora2.jpg);">
+                <div class="content">
+                    <div class="name">Bora Bora</div>
+                    <div class="des">Bora Bora is a small island in the South Pacific, part of French Polynesia. It is known for its clear blue waters, overwater bungalows, white sandy beaches, and a large central volcano called Mount Otemanu. Bora Bora is a popular destination for honeymoons and luxury vacations.</div>
+                    <a href="#services" onclick="glowTarget(event)">
+                     <button>Book Your Travel</button>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+
+            <div class="button">
+            <button class="prev"><i
+                    class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i
+                    class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+       </div>
+      
+       </section>
+
+         
+       </div>
+      
+      <!-- Top Deals -->
+       <section id="top-deals">
+       <section class="top-deals-section">
+       <h2>Top Deals</h2>
+           <div class="deals-container">
+           <div class="deal-card">
+           <h3>Orlando Theme Park Escape – ₱34,200/person</h3>
+           <ul>
+              <li>Duration: 4 nights</li>
+              <li>Includes: Hotel + 3-day park hopper pass</li>
+              <li>Why Go: For the kid in all of us – Disney, Universal, and more!</li>
+           </ul>
+           </div>
+           <div class="deal-card">
+           <h3>Bali, Indonesia – ₱28,500/person</h3>
+           <ul>
+               <li>Duration: 6 nights / 7 days</li>
+               <li>Includes: Beachfront villa, airport transfers, daily breakfast</li>
+               <li>Why Go: Surf, sunsets, temples, and tropical chill.</li>
+            </ul>
+            </div>
+            <div class="deal-card">
+            <h3>Tokyo, Japan – ₱51,300/person</h3>
+            <ul>
+            <li>Duration: 6 nights</li>
+            <li>Includes: Central hotel, JR Pass, sushi tasting tour</li>
+            <li>Why Go: Anime, cherry blossoms, neon nights & tradition.</li>
+            </ul>
+            </div>
+            </div>
+       </section>
+       </section>
+       
+
+       <!-- Reviews -->
+       <section id="reviews">
+        <h2 class="reviews-heading">Reviews</h2>
+        <div class="testimonials">
+        
+        <div class="card">
+        
+        <svg class="vector-7" width="415" height="189" viewBox="0 0 415 189" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 0H0V189H415V0H345" stroke="#89A8B2" />
+        </svg>
+        <img src="img/pic1.jpg" alt="Mia">
+          <span class="username">@WanderWithMia</span>
+          <div class="title">"Solo no more!"</div>
+          <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="text">
+         Was nervous about backpacking alone through Peru, but I matched with a buddy who shared my hiking pace and snack obsession. 10/10 would trek again.
+        </div>
+        </div>
+
+        <div class="card">
+        <svg class="vector-7" width="415" height="189" viewBox="0 0 415 189" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 0H0V189H415V0H345" stroke="#89A8B2" />
+        </svg>
+        <img src="img/pic2.jpg" alt="Mia">
+        <span class="username">@WanderWithMia</span>
+        <div class="title">"Solo no more!"</div>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="text">
+        Was nervous about backpacking alone through Peru, but I matched with a buddy who shared my hiking pace and snack obsession. 10/10 would trek again.
+        </div>
+        </div>
+
+        <div class="card">
+        <svg class="vector-7" width="415" height="189" viewBox="0 0 415 189" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 0H0V189H415V0H345" stroke="#89A8B2" />
+        </svg>
+        <img src="img/pic3.jpg" alt="Mia">
+        <span class="username">@WanderWithMia</span>
+        <div class="title">"Solo no more!"</div>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="text">
+        Was nervous about backpacking alone through Peru, but I matched with a buddy who shared my hiking pace and snack obsession. 10/10 would trek again.
+        </div>
+        </div>
+        </div>
+
+       </section>
+       
+
+     <!-- About US -->
+      <section id="about-us">
+         <section class="about-us1">
+      <h2>About Us</h2>
+      <div class="team">
+      <div class="member">
+        <img src="img/rei.png" alt="Reyver Ledesma">
+        <h3>Reyver Ledesma</h3>
+        <p>Designer / Developer</p>
+      </div>
+      <div class="member">
+        <img src="img/sweet.png" alt="Jodessey Swet C. Manisan">
+        <h3>Jodessey Swet C. Manisan</h3>
+        <p>Designer / Developer</p>
+      </div>
+      <div class="member">
+        <img src="img/earl.png" alt="Earl Denver Avergonzado">
+        <h3>Earl Denver Avergonzado</h3>
+        <p>Designer / Developer</p>
+      </div>
+      </div>
+      <p class="description">
+      At Travel Buddies, we believe travel is better when shared. Whether you're a solo adventurer
+      looking for a <br>travel companion, a group planning your next escape, or simply someone who loves
+      connecting with <br>like-minded explorers, we've got you covered.
+      </p>
+      </section>
+
+        
+      </section>
+     
+    <!-- Share Experience -->
+     <section id="share">
+        <div class="container1">
+     <fieldset class="box">
+     <legend>Share Your Experience</legend>
+     <textarea id="experience" placeholder="Type your experience here.."></textarea>
+     </fieldset>
+     <button class="share-btn" onclick="shareExperience()">Share</button>
+     </div>
+
+    <div class="popup" id="popup">Shared</div>
+
+
+
+     </section>
+     
+    <!-- Footer -->
+      <footer>
+    <h2>Follow us on our Socials</h2>
+    <p>Interact with fellow Travelers</p>
+    <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.x.com" target="_blank">
+            <i class="fab fa-x"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+    <p>© 2023 Travel Buddies. All Rights Reserved</p>
+</footer>
+
+       
+       
+    <button id="scrollToTopBtn" title="Go to top">↑</button>
+          
+        
+    </div>
+   
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="landingscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.background {
+    background: url('img/tv-login.png') no-repeat center center;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    filter: blur(4px);
+    z-index: -1;
+}
+
+.logo {
+    position: fixed; 
+    bottom: 5px;
+    left: 5px;
+    z-index: 100; 
+}
+
+.logo img {
+    width: 200px;
+    height: auto;
+}
+
+.signup-container {
+    background-color: #DAE0E5;
+    padding: 2rem 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 340px; 
+    margin: 0 auto; 
+}
+
+h1 {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    color: #000000;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #0f0f0f;
+    font-weight: 400;
+}
+
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #c4c4c4;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    padding-right: 2.5rem; /* Ensure space for the icon */
+}
+
+
+.password-input-wrapper {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #777;
+}
+
+.toggle-password:hover {
+    color: #333;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.remember-me input {
+    margin-right: 0.5rem;
+}
+
+.signup-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #0A2C4A;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signup-btn:hover {
+    background-color: #2f5781;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 1rem;
+    color: #666;
+}
+
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}

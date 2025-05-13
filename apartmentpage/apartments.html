@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Travel Buddies</title>
+    <link rel="stylesheet" href="apartmentstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+         <!-- Header -->
+        <div class="Header">
+            <a href="../landingpage.html#travel-buddies" class="travel-buddies">Travel Buddies</a>
+            <a href="../landingpage.html#top-destinations"class="top-destinations">Top Destinations</a>
+            <a href="../landingpage.html#top-deals"class="top-deals">Top Deals</a>
+            <a href="../landingpage.html#reviews" class="reviews">Reviews</a>
+            <a href="../landingpage.html#about-us" class="about-us">About Us</a>
+            <a href="../user.html" class="user-link">User</a>
+            <div class="line"></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <div class="search-filters">
+                <div class="filter-group">
+                    <label for="location">Location/City</label>
+                    <select id="location">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="philippines">Philippines</option>
+                        <option value="united states of america">United States of America</option>
+                        <option value="japan">Japan</option>
+                        <option value="cambodia">Cambodia</option>
+                        <option value="united kingdom">United Kingdom</option>
+                        <option value="australia">Australia</option>
+                        <option value="singapore">Singapore</option>
+                       
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="budget">Budget</label>
+                    <select id="budget">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="low">₱0 - ₱5,000</option>
+                        <option value="medium">₱5,000 - ₱10,000</option>
+                        <option value="high">₱10,000 - ₱20,000</option>
+                        <option value="high">₱20,000 - ₱50,000</option>
+                        <option value="high">₱50,000+</option>
+                    </select>
+                    </select>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="hotels-section">
+            <h2>APARTMENTS</h2>
+            <div class="hotels-grid">
+                <!-- Hotel cards will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <section class="footer">
+  <div class="footer-content">
+    <!-- Left Section: Logo + Tagline -->
+    <div class="footer-left">
+      <img src="../img/logo.png" alt="Travel Buddies Logo" class="logo" />
+      <p class="tagline">
+    Travel smarter, travel together<br />
+    <span class="subtext">with Travel Buddies.</span>
+    </div>
+
+   <!-- Middle Section: Contact Form -->
+<div class="footer-middle">
+  <h3>Contact Us</h3>
+  <form id="contactForm" class="contact-form-row">
+  <div class="contact-left">
+    <input type="text" id="name" placeholder="Full Name" />
+    <input type="email" id="email" placeholder="Email" />
+    <input type="tel" id="phone" placeholder="Phone Number" />
+  </div>
+  <div class="contact-right">
+    <textarea id="message" placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </div>
+</form>
+</div>
+
+    <!-- Right Section: Socials -->
+    <div class="footer-right">
+      <h3>Follow us on our <br />Socials!</h3>
+      <p>Interact with fellow Travelers</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<button id="scrollToTopBtn" title="Go to top">↑</button>
+
+  <footer class="footer-bottom">
+    <p>© 2025 Travel Buddies. All Rights Reserved</p>
+  </footer>
+    </main>
+    <script src="apartmentscript.js"></script>
+</body>
+</html>
